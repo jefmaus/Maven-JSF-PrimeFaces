@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Maven - JSF - PrimeFaces</title>
+    </h:head>
+    <h:body>
+        <h:form prependId="false">
+            <p:growl id="msg" widgetVar="msg" autoUpdate="true" />
+            <div class="ui-g">
+                <div class="ui-g-12">
+                    <p:inputText id="saludo" required="true" placeholder="Ingresa un mensaje" value="#{mainBean.mensaje}" requiredMessage="Debe ingresar un mensaje"  />
+                </div>
+                <div class="ui-g-12">
+                    <p:commandButton value="enviar" validateClient="true" action="mensaje?faces-redirect=true" />
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
